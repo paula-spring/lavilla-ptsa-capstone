@@ -74,15 +74,22 @@ nav a:hover {
 nav a:focus {
     outline: 2px solid #B2292E;
 }
-#logo {
+/*capstone 2 grid*/
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.logo {
     text-align: center;
     padding: 20px;
 }
 
-#logo img {
+.logo img {
     width: 200px;
 }
-.logo {
+.contact {
     text-align: left;
     padding: 20px
 }
