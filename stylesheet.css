@@ -42,7 +42,15 @@ header {
 #calendar-link {
     flex: 1;
 }
+/* 600px and wider */
+@media (min-width: 600px) {
+    /* changes you want at 600px and wider go here */
+}
 
+/* 900px and wider */
+@media (min-width: 900px) {
+
+}
 /* Navigation layout added for milestone 2 */
 
 nav {
