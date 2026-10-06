@@ -1,12 +1,9 @@
 
-
-
-
 /*color system */
 :root {
-  --brand: hsl(358 63% 43%);
-  --ink:   hsl(0 0% 10%);
-  --paper: hsl(206 73% 96%);
+  --brand: hsl(358 63% 43%)/*#B52D33*/
+  --ink:   hsl(0 0% 10%); /*A1A1A1*/
+  --paper: hsl(206 73% 96%); /*#EDF6FC*/
 }
 
 /*basic reset*/
@@ -25,14 +22,14 @@ body {
 }
 /*images*/
 img {
-    max-width: 100%;
+    max-width: 100%; /*all img should be max-width: 100% for responsive website*/
     display: block;
 }
 
 /* Header layout */
 header {
     display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
 }
 
 #logo {
@@ -42,15 +39,53 @@ header {
 #calendar-link {
     flex: 1;
 }
+main {
+    display: flex;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+
 /* 600px and wider */
 @media (min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
     /* changes you want at 600px and wider go here */
-}
-
-/* 900px and wider */
 @media (min-width: 900px) {
-
+        main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
+
+/* Carousel headings */
+
+h1 {
+    text-align: center;
+    color: var(--brand);
+    font-size: 2.2rem;
+    margin: 30px 0 20px;
+    letter-spacing: 1px;
+}
+
+#carousel-right h2,
+#carousel-left h2 {
+    color: var(--brand);
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid var(--brand);
+}
+
+#carousel-right,
+#carousel-left {
+    padding: 20px;
+}
+
 /* Navigation layout added for milestone 2 */
 
 nav {
@@ -79,14 +114,38 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav a:focus {
-    outline: 2px solid #B2292E;
+nav a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid black;
+    outline-offset: 3px;
 }
+
+
 /*capstone 2 grid*/
+/* Footer - mobile first */
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 600px and wider */
+@media (min-width: 600px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 900px and wider */
+@media (min-width: 900px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .logo {
@@ -98,9 +157,9 @@ footer {
     width: 200px;
 }
 .contact {
-    text-align: left;
+    text-align: center;
     padding: 20px
 }
 .sponsors {
-    text-align: right;
+    text-align: center;
 }
