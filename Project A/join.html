@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>LaVilla PTSA - Home</title>
+</head>
+
+<body>
+
+<header>
+    <p>Join</p>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="join.html">Join PTSA</a></li>
+            <li><a href="Fundraisers.html">Fundraisers</a></li>
+            <li><a href="Volunteer.html">Volunteers</a></li>
+            <li><a href="Programs.html">Programs</a></li>
+            <li><a href="event.html">Calendar</a></li>
+            <li><a href="OtherWebSites.html">Other Websites</a></li>
+            <li><a href="YourPTSA.html">Your PTSA</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Welcome to LaVilla PTSA</h1>
+ <form action="#" method="post">
+
+  <h2>Join LaVilla PTSA</h2>
+
+  <!-- Name -->
+  <label for="name">Parent/Guardian Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <!-- Email -->
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <!-- Phone -->
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" 
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        title="Enter your phone number"
+        aria-describedby="phone-help"><!--id connect to "phone-help"for screen reader-->
+  <p id="phone-help">Enter your phone number.</p>
+  
+
+  <!-- Student -->
+  <label for="student">Student's Name:</label>
+  <input type="text" id="student" name="student" required>
+
+  <!-- Grade -->
+  <label for="grade">Student's Grade:</label>
+  <select id="grade" name="grade" required>
+    <option value="">Select a grade</option>
+    <option value="6">6th Grade</option>
+    <option value="7">7th Grade</option>
+    <option value="8">8th Grade</option>
+  </select>
+
+  <!-- Volunteer -->
+  <fieldset>
+  <legend>Would you like to volunteer?</legend>
+  </fieldset>
+
+  <label>
+    <input type="radio" name="volunteer" value="yes" required>
+    Yes
+  </label>
+
+  <label>
+    <input type="radio" name="volunteer" value="no">
+    No
+  </label>
+
+  <!-- Comments -->
+  <label for="comments">Comments or Questions:</label>
+  <textarea id="comments" 
+            name="comments">
+            aria-describedby="comments-help"></textarea>
+<p id="comments-help">Tell us if you have any questions about joining or volunteering.</p>
+  <!--above id for comment help screen reader. don't forget the <p> lol.-->
+
+<!-- Submit -->
+  <button type="submit">Join PTSA</button>
+
+</form>
+   <!-- Home page content will go here -->
+
+</main>
+
+<footer>
+    <p>LaVilla School of the Arts PTSA</p>
+</footer>
+
+</body>
+</html>
