@@ -1,8 +1,8 @@
 
 /*color system */
 :root {
-  --brand: hsl(358 63% 43%)/*#B52D33*/
-  --ink:   #000000; /*A1A1A1*/
+  --brand: hsl(358 63% 43%);/*#B52D33*/
+  --ink:   #000000; 
   --paper: hsl(206 73% 96%); /*#EDF6FC*/
 }
 
@@ -33,12 +33,63 @@ header {
 }
 
 #logo {
-    flex: 2;
+    flex: 3;
 }
 
 #calendar-link {
     flex: 1;
 }
+
+/* Navigation layout added for milestone 2 */
+
+
+nav {
+    flex-basis: 100%;
+}
+nav ul {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+nav a {
+   color: var(--ink);
+    margin: 5px;
+    background-color: var(--brand);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+
+nav a:hover {
+    color: var(--ink);
+    background-color: #EDD899;
+    text-decoration: underline;
+}
+
+
+nav a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid black;
+    outline-offset: 3px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -55,20 +106,10 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     main {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
-
-    main h1 {
-        flex-basis: 100%;
-    }
-
-    #carousel-right,
-    #carousel-left {
-        flex: 1;
-    }
-
 }
 
 /* Carousel headings */
@@ -100,52 +141,19 @@ h2 {
     padding: 20px;
 }
 
-/* Navigation layout added for milestone 2 */
-
-nav {
-    flex-basis: 100%;
-}
-nav ul {
+#carousel-right ul {
     display: flex;
-    flex-direction:column;
-    align-items: center;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     list-style: none;
 }
 
-@media (min-width: 600px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+#carousel-left ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
 }
-
-nav a {
-   color: var(--ink);
-    margin: 5px;
-    background-color: var(--brand);
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    display: inline-block;
-}
-
-nav a:hover {
-    color: var(--ink);
-    background-color: #EDD899;
-    text-decoration: underline;
-}
-
-nav a:focus,
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: 3px solid black;
-    outline-offset: 3px;
-}
-
 
 /*capstone 2 grid*/
 /* Footer - mobile first */
