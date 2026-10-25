@@ -1,0 +1,3 @@
+I added a mobile navigation toggle to the website.  The toggle allows visitors to open and close the navigation links by clicking the hamburger menu button. 
+I links my external script.js file in the head of my HTML doument using the defer attribute.
+To test the feature, open the website in a browser, resize the browser to a mobile screen size, and click the hamburger menu button to see the navigation links appear and disappear.

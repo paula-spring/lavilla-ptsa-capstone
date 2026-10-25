@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="stylesheet.css">
 
         <title> PTSA</title>
+        <script src="script.js" defer></script>
     </head>
 <!--here are the landmarks-->
 <body>
@@ -18,17 +19,22 @@
         <section id="logo">
             <h2>LaVilla School ot the Arts PTSA</h2>
             <img src="images/logo_PNG.avif" alt="LaVilla School of the Arts PTSA logo">
-        <p>PTSA</p>
         </section>
 
         <section id="calendar-link">
             <h2>PTSA Calendar</h2>
-            <a href="event.html">Calendar</a>
+            <a href="event.html">
+                <img src="images/calendar.jpg" alt="view the PTSA calendar">
+            </a>
         </section>
     
 
     <!--navigation-->
-        <nav>
+
+    
+        <nav id="mainNav">
+            <button id="navToggle" type="button" aria-label="navigation menu" aria-expanded="false"> 
+                <span></span> <span></span> <span></span> </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="join.html">Join PTSA</a></li>

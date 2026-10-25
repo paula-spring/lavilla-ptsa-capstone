@@ -29,17 +29,33 @@ img {
 /* Header layout */
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    background-color: B8D8EA;
+    padding: 1rem;
 }
 
 #logo {
     flex: 3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #calendar-link {
     flex: 1;
 }
 
+#logo img {
+    display: block;
+    width: 45%;
+    height: auto;
+}
+
+#logo h2,
+#calendar-link h2 {
+    margin-bottom: 0.5rem;
+}
 /* Navigation layout added for milestone 2 */
 
 
@@ -65,11 +81,11 @@ nav ul {
 
 nav a {
    color: var(--ink);
-    margin: 5px;
+    margin: 3px;
     background-color: var(--brand);
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 6px 12px;
+    border-radius: 12px;
     display: inline-block;
 }
 
@@ -81,11 +97,11 @@ nav a:hover {
 }
 
 
-nav a:focus,
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
+nav a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
     outline: 3px solid black;
     outline-offset: 3px;
 }
@@ -194,3 +210,269 @@ footer {
 .sponsors {
     text-align: center;
 }
+/* Mobile navigation */
+#navToggle {
+display: none;
+}
+
+#navToggle span {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px 0;
+background-color: var(--ink);
+border-radius: 2px;
+}
+
+@media (max-width: 599px) {
+#navToggle {
+display: block;
+padding: 6px 10px;
+margin: 10px auto;
+background-color: transparent;
+border: none;
+cursor: pointer;
+align-self: center;
+}
+
+}
+
+/* Show and hide navigation links on mobile */
+
+@media (max-width: 599px) {
+    html.js-enabled #mainNav ul {
+        display: none;
+    }
+
+    html.js-enabled #mainNav.open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
