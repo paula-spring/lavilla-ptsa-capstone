@@ -24,9 +24,21 @@ const carousels = document.querySelectorAll(
 
 carousels.forEach(function (carousel) {
     const items = carousel.querySelectorAll("li");
+    let currentIndex = 0;
 
-    if (items.length > 0) {
-        items[0].classList.add("active");
+    if (items.length === 0) {
+        return;
     }
+
+    items[currentIndex].classList.add("active");
+
+    // Change to the next image every 4 seconds
+    setInterval(function () {
+        items[currentIndex].classList.remove("active");
+
+        currentIndex = (currentIndex + 1) % items.length;
+
+        items[currentIndex].classList.add("active");
+    }, 4000);
 });
 
