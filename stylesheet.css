@@ -31,20 +31,32 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: B8D8EA;
-    padding: 1rem;
+    flex-wrap: wrap;
+    background-color: #B8D8EA;
+    padding: 1.5rem;
+    border-bottom: 5px solid var(--brand);
 }
-
-#logo {
-    flex: 3;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+/* Logo panel */ 
+#logo { 
+    flex: 3; 
+    display: flex;
+     flex-direction: column; 
+     align-items: center; 
+     background-color: #FFFFFF; 
+     border: 2px solid #a0b4c3; ; 
+     border-radius: 8px; 
+     padding: 1rem; 
+     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.30);
 }
-
-#calendar-link {
-    flex: 1;
-}
+/* Calendar panel */ 
+#calendar-link { 
+    flex: 1; 
+    background-color: #FFFFFF; 
+    border: 2px solid #a0b4c3; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    margin-left: 1rem; 
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.30); }
 
 #logo img {
     display: block;
@@ -56,6 +68,16 @@ header {
 #calendar-link h2 {
     margin-bottom: 0.5rem;
 }
+
+/*calendar image sizing*/
+#calendar-link img { 
+    width: 100%; 
+    max-width: 180px; 
+    height: auto;
+     margin: 0 auto; 
+     border-radius: 4px; 
+    }
+
 /* Navigation layout added for milestone 2 */
 
 
@@ -156,19 +178,33 @@ h2 {
 #carousel-left {
     padding: 20px;
 }
-
-#carousel-right ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+/* Carousel layout */
+#carousel-right ul,
+#carousel-left ul {
     list-style: none;
+    position: relative;
 }
 
-#carousel-left ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    list-style: none;
+/* Hide carousel items by default */
+#carousel-right li,
+#carousel-left li {
+    display: none;
+}
+
+/* Show the active carousel item */
+#carousel-right li.active,
+#carousel-left li.active {
+    display: block;
+}
+
+/* Keep carousel images a consistent size */
+#carousel-right img,
+#carousel-left img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 /*capstone 2 grid*/
