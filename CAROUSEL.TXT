@@ -1,0 +1,85 @@
+// Set up the carousels
+const carousels = document.querySelectorAll(
+    "#carousel-right, #carousel-left"
+);
+
+carousels.forEach(function (carousel) {
+    const items = carousel.querySelectorAll("li");
+    const previousButton = carousel.querySelector(".previous");
+    const nextButton = carousel.querySelector(".next");
+    const pausePlayButton = carousel.querySelector(".pause-play");
+
+    let currentIndex = 0;
+    let timer;
+    let isPlaying = true;
+
+    if (items.length === 0) {
+        return;
+    }
+
+    // Display the selected image
+    function showImage(index) {
+        items.forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+        items[index].classList.add("active");
+        currentIndex = index;
+    }
+
+    // Move to the next image
+    function nextImage() {
+        const nextIndex = (currentIndex + 1) % items.length;
+        showImage(nextIndex);
+    }
+
+    // Move to the previous image
+    function previousImage() {
+        const previousIndex =
+            (currentIndex - 1 + items.length) % items.length;
+
+        showImage(previousIndex);
+    }
+
+    // Start automatic rotation
+    function startRotation() {
+        clearInterval(timer);
+
+        timer = setInterval(function () {
+            nextImage();
+        }, 4000);
+
+        isPlaying = true;
+        pausePlayButton.textContent = "Pause";
+    }
+
+    // Stop automatic rotation
+    function stopRotation() {
+        clearInterval(timer);
+        isPlaying = false;
+        pausePlayButton.textContent = "Play";
+    }
+
+    // Show the first image
+    showImage(0);
+
+    // Connect the buttons
+    nextButton.addEventListener("click", function () {
+        nextImage();
+    });
+
+    previousButton.addEventListener("click", function () {
+        previousImage();
+    });
+
+    pausePlayButton.addEventListener("click", function () {
+        if (isPlaying) {
+            stopRotation();
+        } else {
+            startRotation();
+        }
+    });
+
+    // Begin automatic rotation
+    startRotation();
+});
