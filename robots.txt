@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paula-spring.github.io/lavilla-ptsa-capstone/sitemap.xml

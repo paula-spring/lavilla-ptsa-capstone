@@ -296,10 +296,29 @@ align-self: center;
     }
 }
 
+.board-image {
+    width:850px;
+    height: auto;
+}
 
+/*join Ptsa form*/
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+}
 
+form label {
+    display: block;
+    margin: 12px 0 5px;
+}
 
-
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+}
 
 
 

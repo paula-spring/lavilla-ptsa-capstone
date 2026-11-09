@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <title>LaVilla PTSA - Home</title>
+    <title>Join LaVilla PTSA | Support the Arts and Students</title>
+    <meta name="discription"
+          content="Join LaVilla PTSA and help support student programs, arts education, 
+          school events, fundraising, and volunteer opportunities at LaVilla School of the Arts.">
 </head>
 
 <body>
 
 <header>
-    <p>Join</p>
 
     <nav>
         <ul>
@@ -29,9 +31,10 @@
 <main>
 
     <h1>Welcome to LaVilla PTSA</h1>
- <form action="#" method="post">
+   <img src="images/join.webp" alt="join the PTSA">
+   <form action="#" method="post">
 
-  <h2>Join LaVilla PTSA</h2>
+  <h2>Become a Member and Get Involved</h2>
 
   <!-- Name -->
   <label for="name">Parent/Guardian Name:</label>
@@ -65,23 +68,25 @@
 
   <!-- Volunteer -->
   <fieldset>
-  <legend>Would you like to volunteer?</legend>
+    <legend>Would you like to volunteer?</legend>
+
+
+    <label>
+      <input type="radio" name="volunteer" value="yes" required>
+      Yes
+    </label>
+
+    <label>
+      <input type="radio" name="volunteer" value="no">
+      No
+    </label>
+
   </fieldset>
-
-  <label>
-    <input type="radio" name="volunteer" value="yes" required>
-    Yes
-  </label>
-
-  <label>
-    <input type="radio" name="volunteer" value="no">
-    No
-  </label>
 
   <!-- Comments -->
   <label for="comments">Comments or Questions:</label>
   <textarea id="comments" 
-            name="comments">
+            name="comments"
             aria-describedby="comments-help"></textarea>
 <p id="comments-help">Tell us if you have any questions about joining or volunteering.</p>
   <!--above id for comment help screen reader. don't forget the <p> lol.-->
@@ -90,7 +95,7 @@
   <button type="submit">Join PTSA</button>
 
 </form>
-   <!-- Home page content will go here -->
+  
 
 </main>
 
