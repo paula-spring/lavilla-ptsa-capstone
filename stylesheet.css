@@ -19,15 +19,14 @@ body {
     line-height: 1.6;
     color: var(--ink);
     background-color: var(--paper);
-}
-/*images*/
-img {
-    max-width: 100%; /*all img should be max-width: 100% for responsive website*/
-    display: block;
+    border-right: 22px solid red;
+    border-left: 22px solid red;
+    border-bottom: 22px solid red;
 }
 
 /* Header layout */
 header {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,33 +37,35 @@ header {
 }
 /* Logo panel */ 
 #logo { 
-    flex: 3; 
+    flex: 1; 
     display: flex;
-     flex-direction: column; 
      align-items: center; 
-     background-color: #FFFFFF; 
-     border: 2px solid #a0b4c3; ; 
-     border-radius: 8px; 
+     justify-content: center;
+     background-color: #B8D8EA; 
      padding: 1rem; 
-     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.30);
+}
+
+#logo h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333333;
+    margin: 0;
 }
 /* Calendar panel */ 
 #calendar-link { 
-    flex: 1; 
+    position: absolute;
+    right: 8rem;
+    top: 110px;
+    z-index: 10;
+    width: 180px;
     background-color: #FFFFFF; 
     border: 2px solid #a0b4c3; 
     border-radius: 8px; 
     padding: 1rem; 
-    margin-left: 1rem; 
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.30); }
 
-#logo img {
-    display: block;
-    width: 45%;
-    height: auto;
-}
 
-#logo h2,
+#logo h1,
 #calendar-link h2 {
     margin-bottom: 0.5rem;
 }
@@ -131,6 +132,7 @@ button:focus-visible {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 20px;
@@ -215,6 +217,19 @@ h2 {
     margin: 0 auto;
 }
 
+.join-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.join-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
 /*capstone 2 grid*/
 /* Footer - mobile first */
 footer {
@@ -246,6 +261,7 @@ footer {
 
 .logo img {
     width: 200px;
+    height: auto;
 }
 .contact {
     text-align: center;
@@ -319,12 +335,46 @@ form textarea {
     width: 100%;
     padding: 10px;
 }
+fieldset {
+    border: 1px solid #a0b4c3;
+    background-color:#FFFFFF;
+    padding: 20px 15px 15px;
+    margin-bottom: 20px;
+}
 
+fieldset legend {
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color:#FFFFFF
+}
 
+.volunteer-question p {
+    margin-bottom: 5px;
+    
+}
 
+.volunteer-question fieldset {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: fit-content;
+    border: 1px solid #a0b4c3;
+    background-color: #FFFFFF;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
 
+.volunteer-question label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
 
-
+.volunteer-question input[type="radio"] {
+    margin: 0;
+}
 
 
 

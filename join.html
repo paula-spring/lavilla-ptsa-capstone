@@ -50,7 +50,7 @@
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         title="Enter your phone number"
         aria-describedby="phone-help"><!--id connect to "phone-help"for screen reader-->
-  <p id="phone-help">Enter your phone number.</p>
+  
   
 
   <!-- Student -->
@@ -67,22 +67,23 @@
   </select>
 
   <!-- Volunteer -->
-  <fieldset>
-    <legend>Would you like to volunteer?</legend>
+<div class="volunteer-question">
 
+    <p>Would you like to volunteer?</p>
 
-    <label>
-      <input type="radio" name="volunteer" value="yes" required>
-      Yes
-    </label>
+    <fieldset>
+        <label>
+            <input type="radio" name="volunteer" value="yes" required>
+            Yes
+        </label>
 
-    <label>
-      <input type="radio" name="volunteer" value="no">
-      No
-    </label>
+        <label>
+            <input type="radio" name="volunteer" value="no">
+            No
+        </label>
+    </fieldset>
 
-  </fieldset>
-
+</div>
   <!-- Comments -->
   <label for="comments">Comments or Questions:</label>
   <textarea id="comments" 
