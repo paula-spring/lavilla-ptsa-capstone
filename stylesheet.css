@@ -106,6 +106,7 @@ nav a {
    color: var(--ink);
     margin: 3px;
     background-color: var(--brand);
+    color: #FFFFFF;
     text-decoration: none;
     padding: 6px 12px;
     border-radius: 12px;
@@ -114,9 +115,10 @@ nav a {
 
 
 nav a:hover {
-    color: var(--ink);
+    color: #000000;
     background-color: #EDD899;
     text-decoration: underline;
+    
 }
 
 
