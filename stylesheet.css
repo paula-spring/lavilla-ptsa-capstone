@@ -150,6 +150,12 @@ main {
     main {
         flex-direction: column;
     }
+
+    #calendar-link {
+       
+        top: 300px;
+        right: 1rem;
+    }
 }
 
 /* Carousel headings */
